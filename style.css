@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+  }
+
+
+header {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow-x: hidden;
+}
+nav {
+    display: flex;
+    align-items: center;
+    padding: 30px 10%;
+}
+nav .logo {
+    margin-right: auto;
+}
+nav .logo img {
+    width: 50px;
+}
+nav .links a {
+    text-decoration: none;
+    color: #888;
+    padding: 10px 20px;
+}
+nav .links a.active {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+nav button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 20px;
+}
+nav button img {
+    width: 18px;
+}
+.intro {
+    position: relative;
+    display: flex;
+    gap: 50px;
+    padding: 0px 10%;
+}
+.intro .pattern {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    right: -10%;
+    bottom: -10%;
+}
+.intro .pattern img {
+    width: 100%;
+}
+.cta-container, figure {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px;
+}
+.cta-container > img {
+    width: 20px;
+}
+.cta-container h1 {
+    color: #182e5d;
+    font-size: 2.5rem;
+    padding: 20px 0px;
+    font-weight: 800;
+}
+.cta-container h1 span {
+    color: dodgerblue;
+}
+.cta-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6d7c84;
+}
+.cta-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6d7c84;
+}
+.cta-container #cta {
+    padding: 20px 0px;
+    display: flex;
+    gap: 20px;
+}
+.cta-container #cta button {
+    padding: 15px 25px;
+    border-radius: 50px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.cta-container #cta button:nth-child(1) {
+    background-color: #1b53d6;
+    box-shadow: 0px 10px 15px #3767afda;
+ }
+ .cta-container #cta button:nth-child(2) {
+    background-color: #bcc1cd;
+ }
+ .intro figure img {
+    position: absolute;
+}
+.intro figure .card-1 {
+    width: 60vmin;
+    top: 50px;
+}
+.intro figure .card-2 {
+    width: 65vmin;
+    left: -50px;
+    top: 90px;
+}
+.social {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 80px;
+    z-index: 2;
+}
+.social button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 20px;
+    color: #777;
+
+}
+.social button svg {
+    width: 24px;
+}
+@media screen and (max-width: 1024px) {
+    .links {
+        position: fixed;
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    .links a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .intro .pattern {
+        right: -10%;
+        bottom: -30%;
+    }
+
+    .intro {
+        flex-direction: column;
+        gap: 0;
+        padding: 0px 2.5%;
+    }
+    
+    .intro figure .card-1 {
+        width: 55vmin;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .intro figure .card-2 {
+        width: 60vmin;
+        left: 10%;
+        top: 20px;
+    }
+
+    .cta-container p {
+        font-size: 16px;
+    }
+}
